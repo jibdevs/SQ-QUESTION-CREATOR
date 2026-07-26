@@ -700,8 +700,7 @@ and more opportunities.
 
 
 </div>
-// ELITE
-
+{/* ELITE */}
 
 <div className="level-card elite">
 
