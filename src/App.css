@@ -2,45 +2,42 @@
   box-sizing:border-box;
 }
 
+html{
+  scroll-behavior:smooth;
+}
+
 body{
   margin:0;
-  font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   background:#F5F5F7;
   color:#1D1D1F;
 }
 
-
-/* ================= HERO ================= */
-
-.hero{
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:40px;
-  position:relative;
+button{
+  border:none;
+  cursor:pointer;
+  font-family:inherit;
 }
 
 
-.logo{
-  position:absolute;
-  top:55px;
+/* ================= LOGO ================= */
+
+.logo,
+.profile-logo{
   display:flex;
   flex-direction:column;
   align-items:center;
 }
 
-
-.logo span{
+.logo span,
+.profile-logo span{
   font-size:34px;
   font-weight:700;
   letter-spacing:10px;
 }
 
-
-.logo small{
+.logo small,
+.profile-logo small{
   margin-top:8px;
   font-size:11px;
   letter-spacing:7px;
@@ -49,38 +46,109 @@ body{
 
 
 
-.content h1{
-  margin:0;
-  font-size:110px;
-  line-height:.88;
-  letter-spacing:-8px;
-  font-weight:700;
+/* ================= HERO ================= */
+
+.hero{
+
+  min-height:100vh;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  text-align:center;
+
+  padding:120px 25px 60px;
+
+  position:relative;
+
 }
+
+
+
+.logo{
+
+  position:absolute;
+
+  top:50px;
+
+}
+
+
+
+.content{
+
+  width:100%;
+
+}
+
+
+
+.content h1{
+
+  margin:0;
+
+  font-size:clamp(60px,10vw,120px);
+
+  line-height:.9;
+
+  letter-spacing:-7px;
+
+  font-weight:700;
+
+}
+
 
 
 .content h1 span{
+
   color:#00C896;
+
 }
+
 
 
 .content p{
-  max-width:430px;
-  margin:45px auto;
+
+  max-width:450px;
+
+  margin:40px auto;
+
   color:#86868B;
-  font-size:20px;
+
+  font-size:clamp(16px,2vw,20px);
+
+  line-height:1.5;
+
 }
 
 
 
-button{
-  border:none;
+.content button{
+
   background:#1D1D1F;
+
   color:white;
+
   padding:20px 45px;
+
   border-radius:999px;
+
   font-size:17px;
+
   font-weight:600;
-  cursor:pointer;
+
+  transition:.3s;
+
+}
+
+
+.content button:hover{
+
+  transform:scale(1.05);
+
 }
 
 
@@ -89,135 +157,159 @@ button{
 
 
 .creator-section{
-  min-height:100vh;
+
   background:white;
-  padding:220px 40px;
+
+  min-height:100vh;
+
+  padding:160px 25px;
+
   display:flex;
+
   flex-direction:column;
+
   align-items:center;
+
   text-align:center;
+
 }
 
 
 
-.creator-section h2{
-  font-size:80px;
+.creator-section h2,
+.how-section h2,
+.levels-section h2{
+
+  margin:0;
+
+  font-size:clamp(38px,7vw,80px);
+
   line-height:.95;
-  letter-spacing:-6px;
+
+  letter-spacing:-5px;
+
 }
 
 
 
 .video-box{
-  margin-top:120px;
+
+  margin-top:90px;
+
   position:relative;
-  width:360px;
+
+  width:min(360px,90vw);
+
 }
 
 
 
 .video-wrapper{
-  width:360px;
-  height:640px;
+
+  width:100%;
+
+  aspect-ratio:9/16;
+
   overflow:hidden;
+
   border-radius:45px;
+
   box-shadow:0 50px 120px rgba(0,0,0,.18);
+
 }
 
 
 
 .video-wrapper video{
+
   width:100%;
+
   height:100%;
+
   object-fit:cover;
+
 }
 
 
 
 .like{
+
   position:absolute;
+
   background:white;
-  padding:15px 25px;
+
+  padding:14px 22px;
+
   border-radius:50px;
+
   font-weight:600;
+
   box-shadow:0 20px 50px rgba(0,0,0,.12);
+
 }
 
 
 
 .like1{
+
   top:120px;
+
   left:-70px;
+
 }
 
 
 .like2{
+
   top:260px;
+
   right:-70px;
+
 }
 
 
 .like3{
-  bottom:180px;
+
+  bottom:160px;
+
   left:50%;
+
   transform:translateX(-50%);
+
 }
 
 
 
-.reward{
-  position:absolute;
-  bottom:40px;
-  left:50%;
-  transform:translateX(-50%);
-  background:#1D1D1F;
-  color:white;
-  padding:25px 45px;
-  border-radius:30px;
-  font-size:36px;
-}
-
-
-
-.reward span{
-  display:block;
-  color:#A1A1A6;
-  font-size:13px;
-}
-
-
-
-
-
-/* ================= HOW SQ WORKS ================= */
+/* ================= HOW ================= */
 
 
 .how-section{
+
   min-height:100vh;
+
   background:white;
-  padding:220px 40px;
+
+  padding:160px 25px;
+
   text-align:center;
+
 }
 
 
 
 .how-section h2{
-  font-size:80px;
-  letter-spacing:-6px;
-  margin-bottom:120px;
+
+  margin-bottom:100px;
+
 }
-
-
 
 
 
 .steps-grid{
 
-  display:grid;
+  display:flex;
 
-  grid-template-columns:320px 120px 320px;
-
-  grid-template-rows:auto 120px auto;
+  flex-wrap:wrap;
 
   justify-content:center;
 
@@ -226,8 +318,6 @@ button{
   gap:30px;
 
 }
-
-
 
 
 
@@ -249,74 +339,15 @@ button{
 
 
 
-
-
-/* CREATE */
-
-.step-card:nth-child(1){
-  grid-column:1;
-  grid-row:1;
-}
-
-
-
-/* ARROW RIGHT */
-
-.step-line:nth-child(2){
-  grid-column:2;
-  grid-row:1;
-}
-
-
-
-/* ENGAGE */
-
-.step-card:nth-child(3){
-  grid-column:3;
-  grid-row:1;
-}
-
-
-
-/* DOWN ARROW CENTER */
-
-.step-line:nth-child(4){
-
-  grid-column:1 / 4;
-
-  grid-row:2;
-
-  justify-self:center;
-
-}
-
-
-
-/* EARN */
-
-.earn-card{
-
-  grid-column:1 / 4;
-
-  grid-row:3;
-
-  justify-self:center;
-
-}
-
-
-
-
-
 .step-icon{
 
   width:85px;
 
   height:85px;
 
-  border-radius:30px;
-
   background:white;
+
+  border-radius:30px;
 
   display:flex;
 
@@ -326,7 +357,7 @@ button{
 
   font-size:42px;
 
-  margin-bottom:35px;
+  margin-bottom:30px;
 
 }
 
@@ -337,6 +368,8 @@ button{
   font-size:42px;
 
   letter-spacing:-2px;
+
+  margin:0 0 15px;
 
 }
 
@@ -354,30 +387,11 @@ button{
 
 .step-line{
 
-  font-size:55px;
+  font-size:50px;
 
   color:#00C896;
 
-  font-weight:700;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  line-height:1;
-
 }
-.step-line.down{
-  transform:rotate(90deg);
-}
-
-
-
-
-
-
 
 /* ================= LEVELS ================= */
 
@@ -388,7 +402,7 @@ button{
 
   background:#F5F5F7;
 
-  padding:220px 40px;
+  padding:160px 25px;
 
   text-align:center;
 
@@ -398,11 +412,7 @@ button{
 
 .levels-section h2{
 
-  font-size:80px;
-
-  letter-spacing:-6px;
-
-  margin-bottom:100px;
+  margin-bottom:90px;
 
 }
 
@@ -413,6 +423,8 @@ button{
   display:flex;
 
   justify-content:center;
+
+  align-items:stretch;
 
   gap:35px;
 
@@ -446,6 +458,10 @@ button{
 
   font-size:42px;
 
+  letter-spacing:-2px;
+
+  margin:20px 0;
+
 }
 
 
@@ -456,6 +472,30 @@ button{
 
   font-size:18px;
 
+  line-height:1.5;
+
+}
+
+
+
+.level-card ul{
+
+  padding:0;
+
+  list-style:none;
+
+  margin-top:35px;
+
+}
+
+
+
+.level-card li{
+
+  margin:15px 0;
+
+  font-size:17px;
+
 }
 
 
@@ -464,7 +504,7 @@ button{
 
   display:block;
 
-  margin-top:60px;
+  margin-top:50px;
 
 }
 
@@ -529,14 +569,72 @@ button{
 
 
 
+/* ================= MOBILE ================= */
 
-/* MOBILE */
 
 @media(max-width:700px){
 
 
+.hero{
+
+  min-height:100vh;
+
+  padding:120px 20px 60px;
+
+}
+
+
+
+.logo{
+
+  top:35px;
+
+}
+
+
+
+.logo span{
+
+  font-size:30px;
+
+}
+
+
+
 .content h1{
-  font-size:72px;
+
+  font-size:clamp(55px,16vw,70px);
+
+  letter-spacing:-4px;
+
+}
+
+
+
+.content p{
+
+  margin:30px auto;
+
+  font-size:17px;
+
+}
+
+
+
+.content button{
+
+  padding:18px 35px;
+
+}
+
+
+
+.creator-section,
+.how-section,
+.levels-section{
+
+  padding:100px 20px;
+
 }
 
 
@@ -544,27 +642,36 @@ button{
 .creator-section h2,
 .how-section h2,
 .levels-section h2{
-  font-size:50px;
+
+  font-size:clamp(34px,10vw,45px);
+
+  letter-spacing:-2px;
+
+  line-height:1;
+
 }
 
 
 
-.video-box,
-.video-wrapper{
-  width:320px;
+.video-box{
+
+  margin-top:60px;
+
+  width:280px;
+
 }
 
 
 
-.video-wrapper{
-  height:560px;
+.like{
+
+  display:none;
+
 }
 
 
 
 .steps-grid{
-
-  display:flex;
 
   flex-direction:column;
 
@@ -574,20 +681,104 @@ button{
 
 .step-line{
 
-  transform:rotate(90deg);
+  display:none;
 
 }
 
 
 
-.like1{
-  left:-20px;
+.step-card{
+
+  width:100%;
+
+  max-width:340px;
+
+  min-height:auto;
+
+  padding:35px;
+
 }
 
 
 
-.like2{
-  right:-20px;
+.step-card h3{
+
+  font-size:36px;
+
 }
 
+
+
+.levels-grid{
+
+  flex-direction:column;
+
+  align-items:center;
+
+}
+
+
+
+.level-card{
+
+  width:100%;
+
+  max-width:340px;
+
+  min-height:auto;
+
+  padding:35px;
+
+}
+
+
+
+.level-card h3{
+
+  font-size:36px;
+
+}
+
+
+}
+
+
+
+@media(max-width:380px){
+
+
+.content h1{
+
+  font-size:52px;
+
+}
+
+
+
+.creator-section h2,
+.how-section h2,
+.levels-section h2{
+
+  font-size:32px;
+
+}
+
+
+
+.video-box{
+
+  width:250px;
+
+}
+
+
+}
+.content h1{
+  letter-spacing:-4px;
+}
+
+.creator-section h2,
+.how-section h2,
+.levels-section h2{
+  letter-spacing:-2px;
 }
