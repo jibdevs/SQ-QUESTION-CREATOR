@@ -1,7 +1,10 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Routes, Route, useNavigate } from "react-router-dom";
+import { useState } from "react";
+
 import "./App.css";
 import creatorVideo from "./assets/creator.mp4";
+
 import ScrollToTop from "./components/ScrollToTop";
 
 import Apply from "./pages/Apply.jsx";
@@ -17,29 +20,54 @@ function Home(){
 const navigate = useNavigate();
 
 
+const [openLevel,setOpenLevel] = useState(null);
+
+
+
+function toggleLevel(level){
+
+setOpenLevel(
+openLevel === level ? null : level
+);
+
+}
+
+
+
 
 return(
 
 <div>
 
 
+{/* HERO */}
+
+
 <section className="hero">
 
 
 <motion.div
+
 className="logo"
+
 initial={{opacity:0}}
+
 animate={{opacity:1}}
+
 transition={{duration:.8}}
+
 >
+
 
 <span>
 SQ
 </span>
 
+
 <small>
 CREATORS
 </small>
+
 
 </motion.div>
 
@@ -48,13 +76,18 @@ CREATORS
 
 
 <motion.div
+
 className="content"
+
 initial={{opacity:0,y:60}}
+
 animate={{opacity:1,y:0}}
+
 transition={{
 duration:1,
 ease:"easeOut"
 }}
+
 >
 
 
@@ -70,12 +103,15 @@ Grow.
 Earn.
 </span>
 
+
 </h1>
 
 
 
 <p>
+
 Turn your content into rewards with StreetQuotes.
+
 </p>
 
 
@@ -91,6 +127,7 @@ onClick={()=>navigate("/apply")}
 
 >
 
+
 Become an SQ Creator →
 
 </motion.button>
@@ -100,10 +137,14 @@ Become an SQ Creator →
 </motion.div>
 
 
+
 </section>
 
 
 
+
+
+{/* CREATOR VIDEO */}
 
 
 
@@ -122,9 +163,7 @@ Your rewards.
 
 
 
-
 <div className="video-box">
-
 
 
 <motion.div
@@ -212,8 +251,11 @@ once:true
 
 
 <div className="reward-icon">
+
 💸
+
 </div>
+
 
 
 <div>
@@ -240,11 +282,7 @@ Creator reward received
 
 
 </section>
-
-
-
-
-
+{/* HOW SQ WORKS */}
 
 
 <section className="how-section">
@@ -256,30 +294,35 @@ How SQ works.
 
 
 
-
 <div className="steps-grid">
 
 
 
 <div className="step-card">
 
+
 <div className="step-icon">
 🎥
 </div>
+
 
 <span>
 01
 </span>
 
+
 <h3>
 Create
 </h3>
+
 
 <p>
 Post your content and join SQ campaigns.
 </p>
 
+
 </div>
+
 
 
 
@@ -294,21 +337,26 @@ Post your content and join SQ campaigns.
 
 <div className="step-card">
 
+
 <div className="step-icon">
 ✨
 </div>
+
 
 <span>
 02
 </span>
 
+
 <h3>
 Engage
 </h3>
 
+
 <p>
 Build your audience and create impact.
 </p>
+
 
 </div>
 
@@ -354,6 +402,7 @@ Unlock rewards based on your performance.
 </div>
 
 
+
 </section>
 
 
@@ -363,12 +412,17 @@ Unlock rewards based on your performance.
 
 
 
+{/* CREATOR LEVELS */}
+
+
+
 <section className="levels-section">
 
 
 <h2>
-  Progress as a creator.
+Progress as a creator.
 </h2>
+
 
 
 
@@ -376,31 +430,134 @@ Unlock rewards based on your performance.
 <div className="levels-grid">
 
 
+
+
+
+
+
+{/* CREATOR */}
+
+
+
 <div className="level-card">
+
 
 <span>
 01
 </span>
 
+
 <h3>
 Creator
 </h3>
+
 
 <p>
 Start your journey and turn your content into rewards.
 </p>
 
+
+
 <ul>
 
-<li>✓ Create content</li>
-<li>✓ Earn rewards</li>
-<li>✓ Join campaigns</li>
+<li>
+✓ Create content
+</li>
+
+<li>
+✓ Earn rewards
+</li>
+
+<li>
+✓ Join campaigns
+</li>
 
 </ul>
+
+
+
 
 <strong>
 Start creating
 </strong>
+
+
+
+
+
+<button
+
+className="level-more"
+
+onClick={()=>toggleLevel("creator")}
+
+>
+
+
+{
+openLevel==="creator"
+?
+"Hide ↑"
+:
+"Learn more ↓"
+}
+
+
+</button>
+
+
+
+
+
+
+<AnimatePresence>
+
+
+{
+openLevel==="creator" && (
+
+
+<motion.div
+
+className="level-details"
+
+initial={{
+opacity:0,
+height:0
+}}
+
+animate={{
+opacity:1,
+height:"auto"
+}}
+
+exit={{
+opacity:0,
+height:0
+}}
+
+>
+
+
+<p>
+
+Every creator starts here.
+Create content for SQ campaigns,
+earn rewards and build your reputation.
+
+</p>
+
+
+
+</motion.div>
+
+
+)
+}
+
+
+</AnimatePresence>
+
 
 
 </div>
@@ -410,28 +567,52 @@ Start creating
 
 
 
+
+
+{/* PARTNER */}
+
+
+
+
 <div className="level-card partner">
+
+
 
 <span>
 02
 </span>
 
+
+
 <h3>
 Partner
 </h3>
+
+
 
 <p>
 Grow with brands and unlock bigger opportunities.
 </p>
 
 
+
 <ul>
 
-<li>✓ Bigger campaigns</li>
-<li>✓ Higher rewards</li>
-<li>✓ Priority access</li>
+<li>
+✓ Bigger campaigns
+</li>
+
+<li>
+✓ Higher rewards
+</li>
+
+<li>
+✓ Priority access
+</li>
 
 </ul>
+
+
 
 
 <strong>
@@ -439,12 +620,87 @@ Grow faster
 </strong>
 
 
+
+
+
+<button
+
+className="level-more"
+
+onClick={()=>toggleLevel("partner")}
+
+>
+
+
+{
+openLevel==="partner"
+?
+"Hide ↑"
+:
+"Learn more ↓"
+}
+
+
+</button>
+
+
+
+
+
+
+<AnimatePresence>
+
+
+{
+openLevel==="partner" && (
+
+
+<motion.div
+
+className="level-details"
+
+initial={{
+opacity:0,
+height:0
+}}
+
+animate={{
+opacity:1,
+height:"auto"
+}}
+
+exit={{
+opacity:0,
+height:0
+}}
+
+>
+
+
+<p>
+
+Most creators reach this level.
+Consistent performance unlocks
+bigger campaigns, higher rewards
+and more opportunities.
+
+</p>
+
+
+</motion.div>
+
+
+)
+}
+
+
+</AnimatePresence>
+
+
+
+
 </div>
-
-
-
-
-
+// ELITE
 
 
 <div className="level-card elite">
@@ -455,9 +711,11 @@ Grow faster
 </span>
 
 
+
 <h3>
 Elite
 </h3>
+
 
 
 <p>
@@ -465,13 +723,23 @@ The ultimate level for top creators.
 </p>
 
 
+
 <ul>
 
-<li>✓ Exclusive campaigns</li>
-<li>✓ Premium rewards</li>
-<li>✓ VIP access</li>
+<li>
+✓ Exclusive campaigns
+</li>
+
+<li>
+✓ Premium rewards
+</li>
+
+<li>
+✓ VIP access
+</li>
 
 </ul>
+
 
 
 <strong>
@@ -479,7 +747,89 @@ Top creators only
 </strong>
 
 
+
+
+
+<button
+
+className="level-more"
+
+onClick={()=>toggleLevel("elite")}
+
+>
+
+
+{
+openLevel==="elite"
+?
+"Hide ↑"
+:
+"Learn more ↓"
+}
+
+
+</button>
+
+
+
+
+
+
+<AnimatePresence>
+
+
+{
+openLevel==="elite" && (
+
+
+<motion.div
+
+className="level-details"
+
+initial={{
+opacity:0,
+height:0
+}}
+
+animate={{
+opacity:1,
+height:"auto"
+}}
+
+exit={{
+opacity:0,
+height:0
+}}
+
+>
+
+
+<p>
+
+Elite represents the highest level
+inside SQ. Top creators unlock
+exclusive campaigns, premium rewards
+and VIP opportunities.
+
+</p>
+
+
+
+</motion.div>
+
+
+)
+}
+
+
+</AnimatePresence>
+
+
+
+
 </div>
+
+
 
 
 
@@ -488,6 +838,8 @@ Top creators only
 
 
 </section>
+
+
 
 
 
@@ -501,14 +853,22 @@ Top creators only
 
 
 
+
+
+
 function App(){
 
-    return(
-    
-    <>
-    <ScrollToTop />
-    
-    <Routes>
+
+return(
+
+<>
+
+<ScrollToTop />
+
+
+<Routes>
+
+
 
 <Route
 
@@ -518,36 +878,55 @@ element={<Admin />}
 
 />
 
+
+
 <Route
+
 path="/"
+
 element={<Home />}
+
 />
 
 
+
 <Route
+
 path="/apply"
+
 element={<Apply />}
+
 />
 
 
+
 <Route
+
 path="/profile"
+
 element={<Profile />}
+
 />
 
 
+
 <Route
+
 path="/success"
+
 element={<Success />}
+
 />
 
 
 
 </Routes>
 
+
 </>
 
 )
+
 }
 
 

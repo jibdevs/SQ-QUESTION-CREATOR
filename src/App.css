@@ -678,3 +678,35 @@ li{
 .how-section{
   background:#fff !important;
 }
+.level-more{
+  margin-top:30px;
+  background:none;
+  color:#00C896;
+  font-weight:600;
+  font-size:15px;
+  cursor:pointer;
+}
+
+
+.level-details{
+  overflow:hidden;
+  margin-top:20px;
+  padding-top:20px;
+  border-top:1px solid rgba(0,0,0,.08);
+}
+
+
+.level-details p{
+  color:#86868B;
+  line-height:1.6;
+}
+
+
+.elite .level-details{
+  border-color:rgba(255,255,255,.15);
+}
+
+
+.elite .level-details p{
+  color:#A1A1A6;
+}
