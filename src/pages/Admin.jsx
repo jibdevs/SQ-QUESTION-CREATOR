@@ -14,7 +14,7 @@ export default function Admin(){
         </h1>
   
         <p>
-          Dashboard coming soon.
+          Not for you lol.
         </p>
   
       </div>
