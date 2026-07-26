@@ -649,3 +649,32 @@ li{
   color:#A1A1A6;
   -webkit-text-fill-color:#A1A1A6;
 }
+/* FORCE LIGHT MODE SAFARI / IPHONE */
+
+html,
+body,
+#root{
+  color-scheme: light !important;
+  background:#F5F5F7 !important;
+  color:#1D1D1F !important;
+}
+
+h1,
+h2,
+h3,
+p,
+span,
+li{
+  color:#1D1D1F;
+  -webkit-text-fill-color:#1D1D1F;
+}
+
+.content h1 span{
+  color:#00C896 !important;
+  -webkit-text-fill-color:#00C896 !important;
+}
+
+.creator-section,
+.how-section{
+  background:#fff !important;
+}
