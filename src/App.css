@@ -388,94 +388,122 @@ textarea::placeholder{
 
 @media (max-width:900px){
 
-.hero{
-  padding:120px 20px 70px;
-}
+  .logo{
+    top:30px;
+    left:50%;
+    right:auto;
+    transform:translateX(-50%);
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
 
-.logo{
-  top:30px;
-}
+  .logo span{
+    font-size:30px;
+    letter-spacing:6px;
+  }
 
-.logo span{
-  font-size:30px;
-}
+  .logo small{
+    letter-spacing:6px;
+  }
 
-.content h1{
-  font-size:clamp(52px,15vw,72px);
-  letter-spacing:-2px;
-  line-height:.95;
-}
 
-.content p{
-  font-size:17px;
-  margin:28px auto 38px;
-}
+  .hero{
+    padding:120px 20px 70px;
+    width:100%;
+  }
 
-.creator-section,
-.how-section,
-.levels-section{
-  padding:110px 20px;
-}
 
-.creator-section h2,
-.how-section h2,
-.levels-section h2{
-  font-size:clamp(34px,10vw,48px);
-  letter-spacing:-1px;
-  line-height:1.05;
-}
+  .content h1{
+    font-size:clamp(52px,15vw,72px);
+    letter-spacing:-2px;
+    line-height:.95;
+  }
 
-.video-box{
-  width:min(300px,90vw);
-  margin-top:60px;
-}
 
-.like{
-  display:none;
-}
+  .content p{
+    font-size:17px;
+    margin:28px auto 38px;
+  }
 
-.reward{
-  font-size:28px;
-  padding:20px 30px;
-}
 
-.steps-grid{
-  display:flex;
-  flex-direction:column;
-  gap:25px;
-}
+  .creator-section,
+  .how-section,
+  .levels-section{
+    padding:110px 20px;
+  }
 
-.step-line{
-  display:none;
-}
 
-.step-card,
-.earn-card{
-  width:100%;
-  max-width:340px;
-  min-height:auto;
-  padding:35px;
-}
+  .creator-section h2,
+  .how-section h2,
+  .levels-section h2{
+    font-size:clamp(34px,10vw,48px);
+    letter-spacing:-1px;
+    line-height:1.05;
+  }
 
-.step-card h3{
-  font-size:34px;
-}
 
-.levels-grid{
-  flex-direction:column;
-  align-items:center;
-}
+  .video-box{
+    width:min(300px,90vw);
+    margin-top:60px;
+  }
 
-.level-card{
-  width:100%;
-  max-width:340px;
-  min-height:auto;
-  padding:35px;
-}
 
-.level-card h3{
-  font-size:34px;
-}
+  .like{
+    display:none;
+  }
+
+
+  .reward{
+    font-size:28px;
+    padding:20px 30px;
+  }
+
+
+  .steps-grid{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+  }
+
+
+  .step-line{
+    display:none;
+  }
+
+
+  .step-card,
+  .earn-card{
+    width:100%;
+    max-width:340px;
+    min-height:auto;
+    padding:35px;
+  }
+
+
+  .step-card h3{
+    font-size:34px;
+  }
+
+
+  .levels-grid{
+    flex-direction:column;
+    align-items:center;
+  }
+
+
+  .level-card{
+    width:100%;
+    max-width:340px;
+    min-height:auto;
+    padding:35px;
+  }
+
+
+  .level-card h3{
+    font-size:34px;
+  }
 
 }
 
@@ -555,4 +583,11 @@ textarea{
   background:#fff !important;
   -webkit-text-fill-color:#1D1D1F !important;
   opacity:1 !important;
+}
+@media(max-width:900px){
+
+  .logo span{
+    transform:translateX(3px);
+  }
+
 }
