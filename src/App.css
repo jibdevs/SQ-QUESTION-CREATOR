@@ -425,7 +425,7 @@ textarea{
 
 
 .partner::before{
-  content:"MOST POPULAR";
+  content:"MOST CREATORS";
   position:absolute;
   top:25px;
   right:25px;

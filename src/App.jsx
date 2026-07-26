@@ -367,7 +367,7 @@ Unlock rewards based on your performance.
 
 
 <h2>
-Choose your creator path.
+  Progress as a creator.
 </h2>
 
 
