@@ -9,33 +9,30 @@
   --accent-border: rgba(170, 59, 255, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
   --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+    rgba(0,0,0,.1) 0 10px 15px -3px,
+    rgba(0,0,0,.05) 0 4px 6px -2px;
 
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light;
-color: var(--text);
-background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font:18px/145% var(--sans);
+  letter-spacing:.18px;
 
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
+  color-scheme: light only;
+
+  color:var(--text);
+  background:var(--bg);
+
+  font-synthesis:none;
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 
 
 
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
-}
+
 
 body {
   margin: 0;
@@ -94,4 +91,23 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+/* iPhone Safari dark mode block */
+
+html,
+body,
+#root{
+  color-scheme:light only !important;
+  background:#F5F5F7 !important;
+}
+
+body{
+  color:#1D1D1F !important;
+}
+
+input,
+textarea{
+  background:#fff !important;
+  color:#1D1D1F !important;
+  -webkit-text-fill-color:#1D1D1F !important;
 }
