@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import "./App.css";
 import creatorVideo from "./assets/creator.mp4";
+import ScrollToTop from "./components/ScrollToTop";
 
 import Apply from "./pages/Apply.jsx";
 import Profile from "./pages/Profile.jsx";
@@ -27,8 +28,8 @@ return(
 
 <motion.div
 className="logo"
-initial={{opacity:0,y:-20}}
-animate={{opacity:1,y:0}}
+initial={{opacity:0}}
+animate={{opacity:1}}
 transition={{duration:.8}}
 >
 
@@ -502,10 +503,12 @@ Top creators only
 
 function App(){
 
-
-return(
-
-<Routes>
+    return(
+    
+    <>
+    <ScrollToTop />
+    
+    <Routes>
 
 <Route
 
@@ -542,9 +545,9 @@ element={<Success />}
 
 </Routes>
 
+</>
 
 )
-
 }
 
 
