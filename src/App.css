@@ -722,9 +722,29 @@ h3,
 p,
 span,
 li{
+  -webkit-text-fill-color:inherit;
+}
 
-  -webkit-text-fill-color:currentColor;
 
+/* Elite card fix */
+
+.level-card.elite{
+  color:white !important;
+}
+
+
+.level-card.elite h3,
+.level-card.elite span,
+.level-card.elite li,
+.level-card.elite strong{
+  color:white !important;
+  -webkit-text-fill-color:white !important;
+}
+
+
+.level-card.elite p{
+  color:#A1A1A6 !important;
+  -webkit-text-fill-color:#A1A1A6 !important;
 }
 
 
@@ -975,14 +995,29 @@ body,
 }
 /* IPHONE SAFARI TEXT FIX */
 
-h1,
-h2,
-h3,
-p,
-span,
-li{
+body{
   color:#1D1D1F;
-  -webkit-text-fill-color:#1D1D1F;
+}
+
+
+.elite,
+.elite h3,
+.elite p,
+.elite span,
+.elite li,
+.elite strong{
+  color:white !important;
+  -webkit-text-fill-color:white !important;
+}
+
+
+.elite p{
+  color:#A1A1A6 !important;
+}
+
+
+.elite span{
+  color:#00C896 !important;
 }
 
 
@@ -1020,4 +1055,60 @@ li{
 .hero .logo span{
   display:block;
   margin-left:0px;;
+}
+/* FIX ELITE CARD */
+
+.elite,
+.elite h3,
+.elite p,
+.elite span,
+.elite li,
+.elite strong{
+  color:white !important;
+  -webkit-text-fill-color:white !important;
+}
+
+
+.elite p{
+  color:#A1A1A6 !important;
+  -webkit-text-fill-color:#A1A1A6 !important;
+}
+
+
+.elite span{
+  color:#00C896 !important;
+  -webkit-text-fill-color:#00C896 !important;
+}
+/* TEST ELITE FORCE */
+
+.level-card.elite{
+  background:#1D1D1F !important;
+}
+
+.level-card.elite h3,
+.level-card.elite p,
+.level-card.elite span,
+.level-card.elite li,
+.level-card.elite strong{
+  color:#ffffff !important;
+  -webkit-text-fill-color:#ffffff !important;
+}
+/* FORCE ELITE VISIBILITY */
+
+.level-card.elite{
+  background:#1D1D1F !important;
+  color:#fff !important;
+}
+
+.level-card.elite span,
+.level-card.elite h3,
+.level-card.elite li,
+.level-card.elite strong{
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;
+}
+
+.level-card.elite p{
+  color:#A1A1A6 !important;
+  -webkit-text-fill-color:#A1A1A6 !important;
 }
