@@ -206,21 +206,6 @@ duration:.8
 
 
 
-<motion.div
-className="creator-badge"
-initial={{opacity:0, y:20}}
-whileInView={{opacity:1, y:0}}
-transition={{duration:0.8, delay:1}}
-viewport={{once:true}}
->
-
-<div>
-<span>✦</span>
-<strong>Campaign completed</strong>
-<small>Creator reward unlocked</small>
-</div>
-
-</motion.div>
 
 
 
