@@ -188,7 +188,7 @@ duration:.8
 
 
 <video
-  src="/creator.mp4"
+  src={creatorVideo}
   autoPlay
   loop
   muted
@@ -232,11 +232,6 @@ once:true
 >
 
 
-<div className="reward-icon">
-
-💸
-
-</div>
 
 
 
