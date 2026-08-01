@@ -188,12 +188,11 @@ duration:.8
 
 
 <video
-  src={creatorVideo}
+  src="/creator.mp4"
   autoPlay
-  muted
   loop
+  muted
   playsInline
-  controls
 />
 
 </motion.div>
@@ -201,19 +200,7 @@ duration:.8
 
 
 
-<div className="like like1">
-❤️ 2.4K
-</div>
 
-
-<div className="like like2">
-❤️ 8.7K
-</div>
-
-
-<div className="like like3">
-❤️ 25K
-</div>
 
 
 
