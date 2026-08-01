@@ -188,17 +188,12 @@ duration:.8
 
 
 <video
-
-src={creatorVideo}
-
-autoPlay
-
-muted
-
-loop
-
-playsInline
-
+  src={creatorVideo}
+  autoPlay
+  muted
+  loop
+  playsInline
+  controls
 />
 
 </motion.div>
