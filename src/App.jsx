@@ -207,48 +207,18 @@ duration:.8
 
 
 <motion.div
-
-className="reward-popup"
-
-initial={{
-opacity:0,
-x:40
-}}
-
-whileInView={{
-opacity:[0,1,1,0],
-x:[40,0,0,20]
-}}
-
-transition={{
-duration:4,
-delay:1
-}}
-
-viewport={{
-once:true
-}}
-
+className="creator-badge"
+initial={{opacity:0, y:20}}
+whileInView={{opacity:1, y:0}}
+transition={{duration:0.8, delay:1}}
+viewport={{once:true}}
 >
 
-
-
-
-
 <div>
-
-<strong>
-+€40
-</strong>
-
-
-<span>
-Creator reward received
-</span>
-
-
+<span>✦</span>
+<strong>Campaign completed</strong>
+<small>Creator reward unlocked</small>
 </div>
-
 
 </motion.div>
 
